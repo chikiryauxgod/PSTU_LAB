@@ -5,14 +5,14 @@
 #include <string.h>
 #include <Windows.h>
 
-// Функция для заполнения массива случайными числами
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 void GenArr(int arr[], int length) {
     for (int i = 0; i < length; i++) {
         arr[i] = rand() % 100-49;
     }
 }
 
-// Функция для вывода массива
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РІРѕРґР° РјР°СЃСЃРёРІР°
 void PrintArr(int arr[], int length) {
     for (int i = 0; i < length; i++) {
         printf("%d ", arr[i]);
@@ -20,7 +20,7 @@ void PrintArr(int arr[], int length) {
     printf("\n");
 }
 
-// Функция для проверки, является ли число числом Фибоначчи
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё, СЏРІР»СЏРµС‚СЃСЏ Р»Рё С‡РёСЃР»Рѕ С‡РёСЃР»РѕРј Р¤РёР±РѕРЅР°С‡С‡Рё
 int IsFibonacci(int num) {
     if (num == 0 || num == 1) {
         return 1;
@@ -33,12 +33,12 @@ int IsFibonacci(int num) {
         b = c;
     }
 
-    return (b == num); // Возвращает 1, если число - число Фибоначчи, иначе 0
+    return (b == num); // Р’РѕР·РІСЂР°С‰Р°РµС‚ 1, РµСЃР»Рё С‡РёСЃР»Рѕ - С‡РёСЃР»Рѕ Р¤РёР±РѕРЅР°С‡С‡Рё, РёРЅР°С‡Рµ 0
 }
 
-// Функция для нахождения и вывода чисел Фибоначчи в массиве
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ Рё РІС‹РІРѕРґР° С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё РІ РјР°СЃСЃРёРІРµ
 void FindFibonacci(int arr[], int length) {
-    printf("Числа Фибоначчи в массиве: ");
+    printf("Р§РёСЃР»Р° Р¤РёР±РѕРЅР°С‡С‡Рё РІ РјР°СЃСЃРёРІРµ: ");
     for (int i = 0; i < length; i++) {
         if (IsFibonacci(arr[i])) {
             printf("%d ", arr[i]);
@@ -47,7 +47,7 @@ void FindFibonacci(int arr[], int length) {
     printf("\n");
 }
 
-// Функция для генерации случайных значений матрицы и выделения памяти
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РіРµРЅРµСЂР°С†РёРё СЃР»СѓС‡Р°Р№РЅС‹С… Р·РЅР°С‡РµРЅРёР№ РјР°С‚СЂРёС†С‹ Рё РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё
 void GenMatrix(int*** matrix, int rows, int cols) {
     *matrix = (int**)malloc(rows * sizeof(int*));
     for (int i = 0; i < rows; i++) {
@@ -57,7 +57,7 @@ void GenMatrix(int*** matrix, int rows, int cols) {
         }
     }
 }
-// Функция для вывода матрицы
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РІРѕРґР° РјР°С‚СЂРёС†С‹
 void PrintMatrix(int** matrix, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
@@ -67,13 +67,13 @@ void PrintMatrix(int** matrix, int rows, int cols) {
     }
 }
 
-// Функция для сортировки матрицы по убыванию
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РјР°С‚СЂРёС†С‹ РїРѕ СѓР±С‹РІР°РЅРёСЋ
 void SortMatrix(int** matrix, int rows, int cols) {
     for (int j = 0; j < cols; j++) {
         for (int i = 0; i < rows - 1; i++) {
             for (int k = 0; k < rows - i - 1; k++) {
                 if (matrix[k][j] < matrix[k + 1][j]) {
-                    // Обмен элементов
+                    // РћР±РјРµРЅ СЌР»РµРјРµРЅС‚РѕРІ
                     int temp = matrix[k][j];
                     matrix[k][j] = matrix[k + 1][j];
                     matrix[k + 1][j] = temp;
@@ -83,18 +83,18 @@ void SortMatrix(int** matrix, int rows, int cols) {
     }
 }
 
-// Функция для ввода строки
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІРІРѕРґР° СЃС‚СЂРѕРєРё
 void InpString(char* str, int max_length) {
-    printf("Введите строку (максимум %d символов): ", max_length - 1);
+    printf("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ (РјР°РєСЃРёРјСѓРј %d СЃРёРјРІРѕР»РѕРІ): ", max_length - 1);
     fgets(str, max_length, stdin);
     str[strcspn(str, "\n")] = '\0';
 }
 
 void PrintString(const char* str) {
-    printf("Введенная строка: %s\n", str);
+    printf("Р’РІРµРґРµРЅРЅР°СЏ СЃС‚СЂРѕРєР°: %s\n", str);
 }
 
-// Функция для подсчета количества слов в строке
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїРѕРґСЃС‡РµС‚Р° РєРѕР»РёС‡РµСЃС‚РІР° СЃР»РѕРІ РІ СЃС‚СЂРѕРєРµ
 int Words(const char* str) {
     int word_count = 0;
     int inside = 0;
@@ -121,63 +121,63 @@ int main() {
 
     int arrlength;
     do {
-        printf("Введите размер массива: ");
+        printf("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ");
         scanf_s("%d", &arrlength);
 
         if (arrlength <= 0) {
-            printf("Размер массива должен быть больше нуля.\n");
+            printf("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РЅСѓР»СЏ.\n");
         }
     } while (arrlength <= 0);
 
-    // Выделение памяти для массива
+    // Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РґР»СЏ РјР°СЃСЃРёРІР°
     int* array = (int*)malloc(arrlength * sizeof(int));
     GenArr(array, arrlength);
 
-    printf("Сгенерированный массив: ");
+    printf("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
     PrintArr(array, arrlength);
 
     FindFibonacci(array, arrlength);
 
     int matrows, matcols;
     do {
-        printf("Введите количество строк матрицы: ");
+        printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РјР°С‚СЂРёС†С‹: ");
         scanf_s("%d", &matrows);
 
         if (matrows <= 0) {
-            printf("Количество строк должно быть больше нуля.\n");
+            printf("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РЅСѓР»СЏ.\n");
         }
-        getchar(); // Очистка входного буфера
+        getchar(); // РћС‡РёСЃС‚РєР° РІС…РѕРґРЅРѕРіРѕ Р±СѓС„РµСЂР°
     } while (matrows <= 0);
 
     do {
-        printf("Введите количество столбцов матрицы: ");
+        printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РјР°С‚СЂРёС†С‹: ");
         scanf_s("%d", &matcols);
 
         if (matcols <= 0) {
-            printf("Количество столбцов должно быть больше нуля.\n");
+            printf("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РЅСѓР»СЏ.\n");
         }
-        getchar(); // Очистка входного буфера
+        getchar(); // РћС‡РёСЃС‚РєР° РІС…РѕРґРЅРѕРіРѕ Р±СѓС„РµСЂР°
     } while (matcols <= 0);
 
-    // Выделение памяти для матрицы
+    // Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РґР»СЏ РјР°С‚СЂРёС†С‹
     int** matrix;
     GenMatrix(&matrix, matrows, matcols);
 
-    printf("Сгенерированная матрица:\n");
+    printf("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°:\n");
     PrintMatrix(matrix, matrows, matcols);
-    SortMatrix(matrix, matrows, matcols); // Сортировка матрицы
-    printf("Отсортированная матрица:\n");
+    SortMatrix(matrix, matrows, matcols); // РЎРѕСЂС‚РёСЂРѕРІРєР° РјР°С‚СЂРёС†С‹
+    printf("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°:\n");
     PrintMatrix(matrix, matrows, matcols);
 
-    // Ввод и вывод строки
-    char inputString[100]; // Максимальная длина строки 100 символов
+    // Р’РІРѕРґ Рё РІС‹РІРѕРґ СЃС‚СЂРѕРєРё
+    char inputString[100]; // РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅР° СЃС‚СЂРѕРєРё 100 СЃРёРјРІРѕР»РѕРІ
     InpString(inputString, sizeof(inputString));
     PrintString(inputString);
-    // Подсчет количества слов в строке
+    // РџРѕРґСЃС‡РµС‚ РєРѕР»РёС‡РµСЃС‚РІР° СЃР»РѕРІ РІ СЃС‚СЂРѕРєРµ
     int wordCount = Words(inputString);
-    printf("Количество слов в строке: %d\n", wordCount);
+    printf("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕРІ РІ СЃС‚СЂРѕРєРµ: %d\n", wordCount);
 
-    // Освобождение памяти перед завершением программы
+    // РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё РїРµСЂРµРґ Р·Р°РІРµСЂС€РµРЅРёРµРј РїСЂРѕРіСЂР°РјРјС‹
     free(array);
     return 0;
 }
