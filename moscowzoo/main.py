@@ -1,10 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# Создаем пустой граф
 zoo_graph = nx.Graph()
 
-# Добавляем животных в зоопарк
 zoo_graph.add_node("Белый медведь (умер)")
 zoo_graph.add_node("Горные козлы")
 zoo_graph.add_node("Обезьяны")
@@ -54,17 +52,14 @@ def get_neighbors(animal):
     neighbors = list(zoo_graph.neighbors(animal))
     return neighbors
 
-# Визуализация графа
 pos = nx.spring_layout(zoo_graph)
 plt.figure(figsize=(10, 8))
 nx.draw(zoo_graph, pos, with_labels=True, node_size=500, node_color='lightblue', font_size=10, font_color='black', font_weight='bold', edge_color='gray')
 plt.title("Структурный зоопарк")
 plt.show()
 
-# Вводимое животное
 input_animal = input("Введите имя животного: ")
 
-# Получаем соседей введенного животного
 neighbors = get_neighbors(input_animal)
 if neighbors:
     print(f"Соседи у {input_animal}: {neighbors}")
