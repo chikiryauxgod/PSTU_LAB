@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
+# Создаем пустой граф
 zoo_graph = nx.Graph()
 
 zoo_graph.add_node("Белый медведь (умер)")
