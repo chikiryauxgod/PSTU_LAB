@@ -1,159 +1,126 @@
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <locale.h>
 
-void GenArr(int arr[], int length) {
-    for (int i = 0; i < length; i++) {
-        arr[i] = rand() % 100 - 49;
+int* GenArray(int size) {
+    int* array = (int*)malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        array[i] = rand() % 20 - 10; 
     }
+    return array;
 }
 
-void PrintArr(int arr[], int length) {
-    for (int i = 0; i < length; i++) {
+int** GenMatrix(int rows, int cols) {
+    int** matrix = (int**)malloc(rows * sizeof(int*));
+    for (int i = 0; i < rows; i++) {
+        matrix[i] = (int*)malloc(cols * sizeof(int));
+        for (int j = 0; j < cols; j++) {
+            matrix[i][j] = rand() % 20 - 10; 
+        }
+    }
+    return matrix;
+}
+
+void PrintArray(int* arr, int size) {
+    for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
 }
 
-int* NegativeModul(int arr[], int* length) {
-    int n = *length; // Инициализируем n текущим значением длины массива
-    for (int i = 0; i < *length; i++) {
+int* AddModul(int* arr, int* size) {
+    int newSize = *size;
+    for (int i = 0; i < *size; i++) {
         if (arr[i] < 0) {
-            n++; // Увеличиваем n, если элемент отрицателен
+            arr = (int*)realloc(arr, (newSize + 1) * sizeof(int));
+            for (int j = newSize; j > i; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[i + 1] = abs(arr[i]);
+            newSize++;
+            i++; 
         }
     }
-
-    // Создаем новый массив, большего размера
-    int* newArr = (int*)malloc(n * sizeof(int));
-    if (newArr == NULL) {
-        fprintf(stderr, "Ошибка выделения памяти.\n");
-        exit(1);
-    }
-
-    int newI = 0;
-    for (int i = 0; i < *length; i++) {
-        if (arr[i] < 0) {
-            newArr[newI++] = abs(arr[i]); // Если элемент отрицателен, добавляем его модуль
-        }
-        newArr[newI++] = arr[i];
-    }
-
-    free(arr); // Освобождаем память старого массива
-    *length = n; // Обновляем значение длины
-
-    return newArr; // Возвращаем новый массив
+    *size = newSize;
+    return arr;
 }
 
-void GenMatrix(int*** matrix, int rows, int cols) {
-    *matrix = (int**)malloc(rows * sizeof(int*));
-    for (int i = 0; i < rows; i++) {
-        (*matrix)[i] = (int*)malloc(cols * sizeof(int));
-        for (int j = 0; j < cols; j++) {
-            (*matrix)[i][j] = rand() % 100 - 49;
-        }
-    }
-}
 
 void PrintMatrix(int** matrix, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
-            printf("%d\t", matrix[i][j]);
+            printf("%d ", matrix[i][j]);
         }
         printf("\n");
     }
 }
 
-int** NoEven(int** matrix, int* rows, int* cols) {
-    int newCols = *cols / 2; // Вычисляем новое количество столбцов
-    int** newMatrix = (int**)malloc(*rows * sizeof(int*));
-
-    for (int i = 0; i < *rows; i++) {
-        newMatrix[i] = (int*)malloc(newCols * sizeof(int));
-        int newIndex = 0;
-
-        for (int j = 0; j < *cols; j++) {
-            if (j % 2 == 0) { // Оставляем только нечетные столбцы (изменено с 1 на 0)
-                for (int k = 0; k < *rows; k++) {
-                    newMatrix[k][newIndex] = matrix[k][j];
+int** RemoveEven(int** matrix, int* rows, int* cols) {
+    for (int j = *cols - 1; j >= 0; j--) {
+        if (j % 2 == 0) {
+            for (int i = 0; i < *rows; i++) {
+                for (int k = j; k < *cols - 1; k++) {
+                    matrix[i][k] = matrix[i][k + 1];
                 }
-                newIndex++;
             }
+            (*cols)--;
         }
     }
-
-    for (int i = 0; i < *rows; i++) {
-        free(matrix[i]); // Освобождаем память старой матрицы
-    }
-    free(matrix);
-
-    *cols = newCols; // Обновляем значение числа столбцов
-    return newMatrix; // Возвращаем новую матрицу
+    return matrix;
 }
 
 int main() {
     setlocale(LC_ALL, "ru");
-    int arrlength;
+    srand(time(NULL));
 
-    do {
-        printf("Введите размер массива: ");
-        scanf("%d", &arrlength);
 
-        if (arrlength <= 0) {
-            printf("Размер массива должен быть больше нуля.\n");
-        }
-    } while (arrlength <= 0);
+    int size;
+    printf("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°: ");
+    scanf_s("%d", &size);
 
-    int* arr = (int*)malloc(arrlength * sizeof(int));
 
-    if (arr == NULL) {
-        fprintf(stderr, "Ошибка выделения памяти.\n");
-        return 1;
+    int* array = GenArray(size);
+
+
+    printf("РСЃС…РѕРґРЅС‹Р№ РѕРґРЅРѕРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ:\n");
+    PrintArray(array, size);
+
+    array = AddModul(array, &size);
+
+    printf("РњР°СЃСЃРёРІ РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РјРѕРґСѓР»РµР№:\n");
+    PrintArray(array, size);
+
+   
+    free(array);
+
+
+    int rows, cols;
+    printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°: ");
+    scanf_s("%d", &rows);
+    printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°: ");
+    scanf_s("%d", &cols);
+
+
+    int** matrix = GenMatrix(rows, cols);
+
+
+    printf("РСЃС…РѕРґРЅС‹Р№ РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ:\n");
+    PrintMatrix(matrix, rows, cols);
+
+ 
+    matrix = RemoveEven(matrix, &rows, &cols);
+
+
+    printf("РњР°СЃСЃРёРІ РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ С‡РµС‚РЅС‹С… СЃС‚РѕР»Р±С†РѕРІ:\n");
+    PrintMatrix(matrix, rows, cols);
+
+
+    for (int i = 0; i < rows; i++) {
+        free(matrix[i]);
     }
-
-    GenArr(arr, arrlength);
-    printf("Исходный массив: ");
-    PrintArr(arr, arrlength);
-
-    int* modedArr = NegativeModul(arr, &arrlength);
-    printf("Массив с добавленными модулями: ");
-    PrintArr(modedArr, arrlength);
-    free(modedArr);
-
-    int matrows, matcols;
-
-    do {
-        printf("Введите количество строк матрицы: ");
-        scanf("%d", &matrows);
-
-        if (matrows <= 0) {
-            printf("Количество строк должно быть больше нуля.\n");
-        }
-    } while (matrows <= 0);
-
-    do {
-        printf("Введите количество столбцов матрицы: ");
-        scanf("%d", &matcols);
-
-        if (matcols <= 0) {
-            printf("Количество столбцов должно быть больше нуля.\n");
-        }
-    } while (matcols <= 0);
-
-    int** matrix;
-    GenMatrix(&matrix, matrows, matcols);
-    printf("Исходная матрица:\n");
-    PrintMatrix(matrix, matrows, matcols);
-
-    int** modedMatrix = NoEven(matrix, &matrows, &matcols);
-    printf("Матрица без четных столбцов:\n");
-    PrintMatrix(modedMatrix, matrows, matcols);
-
-    for (int i = 0; i < matrows; i++) {
-        free(modedMatrix[i]);
-    }
-
-    free(modedMatrix);
+    free(matrix);
 
     return 0;
 }
