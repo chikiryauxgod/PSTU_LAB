@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
@@ -134,11 +134,15 @@ int main() {
         switch (choice) {
         case '1':
             U = InpSet();
+            cout << "Универсальное множество U: ";
+            PrSet(U);
             break;
         case '2':
             for (int i = 0; i < 5; ++i) {
                 cout << "Введите множество " << char('A' + i) << ":" << endl;
                 AllSets[i] = InpSet();
+                cout << "Множество " << char('A' + i) << ": ";
+                PrSet(AllSets[i]);
             }
             break;
         case '3': {
