@@ -82,8 +82,7 @@ void FillStrings(char*** stringArray, int size) {
         fprintf(stderr, "Ошибка выделения памяти\n");
         exit(1);
     }
-
-    // Очистить буфер ввода
+    
     while (getchar() != '\n');
 
     for (int i = 0; i < size; ++i) {
@@ -93,11 +92,9 @@ void FillStrings(char*** stringArray, int size) {
             fprintf(stderr, "Ошибка выделения памяти\n");
             exit(1);
         }
-
+        
         printf("Введите строку %d: ", i + 1);
         fgets((*stringArray)[i], MAX_STRING_LENGTH, stdin);
-
-        // Удалить символ новой строки, если он был считан
         size_t length = strlen((*stringArray)[i]);
         if (length > 0 && (*stringArray)[i][length - 1] == '\n') {
             (*stringArray)[i][length - 1] = '\0';
@@ -157,8 +154,7 @@ int main() {
         for (int i = 0; i < secondSize; ++i) {
             PrintArray(&secondArr[i]);
         }
-
-        // Освободить память для второго массива структур Person
+        
         for (int i = 0; i < secondSize; ++i) {
             free(secondArr[i].name);
         }
