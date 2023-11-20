@@ -15,19 +15,19 @@ void Input(FILE* file, int n) {
     for (int i = 0; i < n; i++) {
         struct Owner owner;
 
-        printf("\nÂâåäèòå èìÿ â ôîðìàòå 'Ôàìèëèÿ Èìÿ Îò÷åñòâî': ");
+        printf("\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ 'Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ Ð˜Ð¼Ñ ÐžÑ‚Ñ‡ÐµÑÑ‚Ð²Ð¾': ");
         fgets(owner.name, sizeof(owner.name), stdin);
         owner.name[strcspn(owner.name, "\n")] = '\0';
 
-        printf("Ââåäèòå íîìåð àâòîìîáèëÿ: ");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: ");
         fgets(owner.carNumber, sizeof(owner.carNumber), stdin);
         owner.carNumber[strcspn(owner.carNumber, "\n")] = '\0';
 
-        printf("Ââåäèòå íîìåð òåëåôîíà âëàäåëüöà: ");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð° Ð²Ð»Ð°Ð´ÐµÐ»ÑŒÑ†Ð°: ");
         fgets(owner.phoneNumber, sizeof(owner.phoneNumber), stdin);
         owner.phoneNumber[strcspn(owner.phoneNumber, "\n")] = '\0';
 
-        printf("Ââåäèòå íîìåð òåõïàñïîðòà àâòîìîáèëÿ: ");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÑ…Ð¿Ð°ÑÐ¿Ð¾Ñ€Ñ‚Ð° Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: ");
         fgets(owner.techNumber, sizeof(owner.techNumber), stdin);
         owner.techNumber[strcspn(owner.techNumber, "\n")] = '\0';
 
@@ -41,7 +41,7 @@ void Delete(FILE* file, int elementDel) {
 
     FILE* tempFile;
     if (fopen_s(&tempFile, "temp.txt", "w+") != 0) {
-        printf("Íå óäàëîñü îòêðûòü âðåìåííûé ôàéë.\n");
+        printf("ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð».\n");
         return;
     }
 
@@ -68,7 +68,7 @@ void Delete(FILE* file, int elementDel) {
     remove("programm.txt");
 
     if (rename("temp.txt", "programm.txt") != 0) {
-        printf("Íå óäàëîñü ïåðåèìåíîâàòü âðåìåííûé ôàéë.\n");
+        printf("ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¿ÐµÑ€ÐµÐ¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ñ‚ÑŒ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð».\n");
         return;
     }
 }
@@ -85,19 +85,19 @@ void AddElements(FILE* file, int n, int k) {
     for (int i = 0; i < n; i++) {
         struct Owner owner;
 
-        printf("\nÂâåäèòå èìÿ â ôîðìàòå 'Ôàìèëèÿ Èìÿ Îò÷åñòâî': ");
+        printf("\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ 'Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ Ð˜Ð¼Ñ ÐžÑ‚Ñ‡ÐµÑÑ‚Ð²Ð¾': ");
         fgets(owner.name, sizeof(owner.name), stdin);
         owner.name[strcspn(owner.name, "\n")] = '\0';
 
-        printf("Ââåäèòå íîìåð àâòîìîáèëÿ: ");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: ");
         fgets(owner.carNumber, sizeof(owner.carNumber), stdin);
         owner.carNumber[strcspn(owner.carNumber, "\n")] = '\0';
 
-        printf("Ââåäèòå íîìåð òåëåôîíà âëàäåëüöà: ");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð° Ð²Ð»Ð°Ð´ÐµÐ»ÑŒÑ†Ð°: ");
         fgets(owner.phoneNumber, sizeof(owner.phoneNumber), stdin);
         owner.phoneNumber[strcspn(owner.phoneNumber, "\n")] = '\0';
 
-        printf("Ââåäèòå íîìåð òåõïàñïîðòà àâòîìîáèëÿ: ");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÑ…Ð¿Ð°ÑÐ¿Ð¾Ñ€Ñ‚Ð° Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: ");
         fgets(owner.techNumber, sizeof(owner.techNumber), stdin);
         owner.techNumber[strcspn(owner.techNumber, "\n")] = '\0';
 
@@ -120,52 +120,50 @@ int main() {
 
     if (file != NULL) {
         int choice;
-        printf("Âûáåðèòå îïåðàöèþ:\n1. Äîáàâèòü ýëåìåíòû\n2. Óäàëèòü ýëåìåíò\n3. Ââåñòè íîâûå ýëåìåíòû\n");
+        printf("Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸ÑŽ:\n1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹\n2. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚\n3. Ð’Ð²ÐµÑÑ‚Ð¸ Ð½Ð¾Ð²Ñ‹Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹\n");
         scanf_s("%d", &choice);
 
         switch (choice) {
         case 1: {
             int n, k;
-            printf("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ äëÿ äîáàâëåíèÿ: ");
+            printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ");
             scanf_s("%d", &n);
-            printf("Ââåäèòå íîìåð K, ñ êîòîðîãî íà÷àòü äîáàâëåíèå: ");
+            printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ K, Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð½Ð°Ñ‡Ð°Ñ‚ÑŒ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ: ");
             scanf_s("%d", &k);
 
             AddElements(file, n, k);
 
-            printf("Ýëåìåíòû óñïåøíî äîáàâëåíû.\n");
+            printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ñ‹.\n");
             break;
         }
         case 2: {
             int elementDel;
-            printf("Ââåäèòå íîìåð ýëåìåíòà äëÿ óäàëåíèÿ: ");
+            printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: ");
             scanf_s("%d", &elementDel);
 
             Delete(file, elementDel);
 
-            printf("Ýëåìåíò óñïåøíî óäàëåí.\n");
+            printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑƒÐ´Ð°Ð»ÐµÐ½.\n");
             break;
         }
         case 3: {
             int n;
-            printf("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ äëÿ ââîäà: ");
+            printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ Ð²Ð²Ð¾Ð´Ð°: ");
             scanf_s("%d", &n);
 
             Input(file, n);
 
-            printf("Ýëåìåíòû óñïåøíî ââåäåíû.\n");
+            printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð²Ð²ÐµÐ´ÐµÐ½Ñ‹.\n");
             break;
         }
         default:
-            printf("Íåâåðíûé âûáîð îïåðàöèè.\n");
+            printf("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸.\n");
         }
-
         fclose(file);
     }
     else {
-        printf("Íå óäàëîñü îòêðûòü ôàéë.\n");
+        printf("ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ð°Ð¹Ð».\n");
         return 1;
     }
-
     return 0;
 }
