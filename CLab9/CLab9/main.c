@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Owner {
     char name[100];
@@ -7,9 +8,7 @@ struct Owner {
     char techNumber[20];
 };
 
-void Input(FILE* file, int n) {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251); 
+void Input(FILE* file, int n) { 
     while ((getchar()) != '\n');
 
     for (int i = 0; i < n; i++) {
@@ -36,11 +35,9 @@ void Input(FILE* file, int n) {
 }
 
 void Delete(FILE* file, int elementDel) {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-
     FILE* tempFile;
-    if (fopen_s(&tempFile, "temp.txt", "w+") != 0) {
+    tempFile = fopen("temp.txt", "w+");
+    if (tempFile == NULL) {
         printf("Не удалось открыть временный файл.\n");
         return;
     }
@@ -75,9 +72,7 @@ void Delete(FILE* file, int elementDel) {
 
 
 void AddElements(FILE* file, int n, int k) {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-
+    
     while ((getchar()) != '\n');
 
     fseek(file, (k - 1) * sizeof(struct Owner), SEEK_SET);
@@ -114,22 +109,20 @@ void AddElements(FILE* file, int n, int k) {
 }
 
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
     FILE* file = fopen("programm.txt", "r+");
 
     if (file != NULL) {
         int choice;
         printf("Выберите операцию:\n1. Добавить элементы\n2. Удалить элемент\n3. Ввести новые элементы\n");
-        scanf_s("%d", &choice);
+        scanf("%d", &choice);
 
         switch (choice) {
         case 1: {
             int n, k;
             printf("Введите количество элементов для добавления: ");
-            scanf_s("%d", &n);
+            scanf("%d", &n);
             printf("Введите номер K, с которого начать добавление: ");
-            scanf_s("%d", &k);
+            scanf("%d", &k);
 
             AddElements(file, n, k);
 
@@ -139,7 +132,7 @@ int main() {
         case 2: {
             int elementDel;
             printf("Введите номер элемента для удаления: ");
-            scanf_s("%d", &elementDel);
+            scanf("%d", &elementDel);
 
             Delete(file, elementDel);
 
@@ -149,7 +142,7 @@ int main() {
         case 3: {
             int n;
             printf("Введите количество элементов для ввода: ");
-            scanf_s("%d", &n);
+            scanf("%d", &n);
 
             Input(file, n);
 
