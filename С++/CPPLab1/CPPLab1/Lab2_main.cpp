@@ -8,9 +8,9 @@ Student make_student() {
 	string s2;
 	float f;
 	cout << "Vvedite name: ";
-	cin >> s1;
+	cin >> s1; 
 	cout << "Vvedite groupu: ";
-	cin >> s1;
+	cin >> s2;
 	cout << "Vvedite sredniy ball: ";
 	cin >> f;
 
@@ -22,7 +22,7 @@ void print_student(Student t) {
 	t.show();
 }
 
-void main() {
+int main() {
 	Student t1;
 	t1.show();
 	Student t2("Petrov Matvey Sergeevich", "IPR-22-1B", 3.1);
@@ -34,5 +34,6 @@ void main() {
 	print_student(t3);
 	t1 = make_student();
 	t2.show();
-}
 
+	return 0;
+}
