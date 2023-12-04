@@ -1,1 +1,4 @@
-﻿  CPPLab1.vcxproj -> C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CPPLab1\x64\Debug\CPPLab1.exe
+﻿  Lab2_main.cpp
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CPPLab1\CPPLab1\Lab2_main.cpp(25,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CPPLab1\CPPLab1\Lab2_main.cpp(28,54): warning C4305: аргумент: усечение из "double" в "float"
+  CPPLab1.vcxproj -> C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CPPLab1\x64\Debug\CPPLab1.exe

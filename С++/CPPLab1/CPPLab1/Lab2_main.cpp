@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-Student make_student(){
+Student make_student() {
 	string s1;
 	string s2;
 	float f;
@@ -13,7 +13,7 @@ Student make_student(){
 	cin >> s1;
 	cout << "Vvedite sredniy ball: ";
 	cin >> f;
-	
+
 	Student t(s1, s2, f);
 	return t;
 }
