@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CPPLab11\CPPLab11\main.cpp(31,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  CPPLab11.vcxproj -> C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CPPLab11\x64\Debug\CPPLab11.exe
