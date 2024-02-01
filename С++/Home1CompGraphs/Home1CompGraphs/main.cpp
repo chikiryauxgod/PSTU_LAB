@@ -35,26 +35,26 @@ int main() {
     Point B = { 3, 4, 1 };
     Point C = { 5, 6, 1 };
 
-    // Медиана
+    // РњРµРґРёР°РЅР°
     Point M = midpoint(A, B);
     Point MS = subtract(M, C);
-    cout << "Уравнение медианы: ";
+    cout << "РЈСЂР°РІРЅРµРЅРёРµ РјРµРґРёР°РЅС‹: ";
     print(MS, { 0, 0, 1 });
 
-    // Биссектрисы
+    // Р‘РёСЃСЃРµРєС‚СЂРёСЃС‹
     Point BA = subtract(B, A);
     Point BC = subtract(B, C);
     Point BP = midpoint(A, add(multiply(BA, BC.w / BA.w), A));
     Point CP = midpoint(B, add(multiply(BC, BA.w / BC.w), B));
 
-    cout << "Уравнение первой биссектрисы: ";
+    cout << "РЈСЂР°РІРЅРµРЅРёРµ РїРµСЂРІРѕР№ Р±РёСЃСЃРµРєС‚СЂРёСЃС‹: ";
     print(BP, C);
-    cout << "Уравнение второй биссектрисы: ";
+    cout << "РЈСЂР°РІРЅРµРЅРёРµ РІС‚РѕСЂРѕР№ Р±РёСЃСЃРµРєС‚СЂРёСЃС‹: ";
     print(CP, A);
 
-    // Высота
+    // Р’С‹СЃРѕС‚Р°
     Point H = midpoint(A, multiply(subtract(B, C), subtract(A, C).x / subtract(B, C).x));
-    cout << "Уравнение высоты: ";
+    cout << "РЈСЂР°РІРЅРµРЅРёРµ РІС‹СЃРѕС‚С‹: ";
     print(subtract(A, H), B);
 
     return 0;
