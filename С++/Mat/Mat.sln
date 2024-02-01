@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Mat", "Mat\Mat.pyproj", "{164E5329-D8EB-4C95-A78A-A0DEC02E351E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{164E5329-D8EB-4C95-A78A-A0DEC02E351E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164E5329-D8EB-4C95-A78A-A0DEC02E351E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1E4C632-512C-4558-8D41-F3B893B67B5D}
+	EndGlobalSection
+EndGlobal
