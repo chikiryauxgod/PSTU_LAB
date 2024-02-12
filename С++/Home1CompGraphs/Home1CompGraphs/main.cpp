@@ -1,47 +1,54 @@
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
-struct Point {
+struct Point 
+{
     double x, y, w;
 };
 
-Point subtract(Point a, Point b) {
+Point subtract(Point a, Point b) 
+{
     return { a.x - b.x, a.y - b.y, 1.0 };
 }
 
-Point add(Point a, Point b) {
+Point add(Point a, Point b) 
+{
     return { a.x + b.x, a.y + b.y, 1.0 };
 }
 
-Point multiply(Point a, double scalar) {
+Point multiply(Point a, double scalar)
+{
     return { a.x * scalar, a.y * scalar, 1.0 };
 }
 
-Point midpoint(Point a, Point b) {
+Point midpoint(Point a, Point b) 
+{
     return multiply(add(a, b), 0.5);
 }
 
-void print(Point p1, Point p2) {
+void print(Point p1, Point p2) 
+{
     double A = p1.y - p2.y;
     double B = p2.x - p1.x;
     double C = p1.x * p2.y - p2.x * p1.y;
 
-    cout << A << " * x + " << B << " * y + " << C << " = 0" << std::endl;
+    cout << A << " * x + " << B << " * y + " << C << " = 0" << endl;
 }
 
-int main() {
-    setlocale(LC_ALL, "ru");
+int main() 
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     Point A = { 1, 2, 1 };
-    Point B = { 3, 4, 1 };
-    Point C = { 5, 6, 1 };
+    Point B = { 4, 2, 1 };
+    Point C = { 4, 5, 1 };
 
-    // Медиана
     Point M = midpoint(A, B);
     Point MS = subtract(M, C);
     cout << "Уравнение медианы: ";
     print(MS, { 0, 0, 1 });
 
-    // Биссектрисы
     Point BA = subtract(B, A);
     Point BC = subtract(B, C);
     Point BP = midpoint(A, add(multiply(BA, BC.w / BA.w), A));
@@ -52,7 +59,6 @@ int main() {
     cout << "Уравнение второй биссектрисы: ";
     print(CP, A);
 
-    // Высота
     Point H = midpoint(A, multiply(subtract(B, C), subtract(A, C).x / subtract(B, C).x));
     cout << "Уравнение высоты: ";
     print(subtract(A, H), B);
