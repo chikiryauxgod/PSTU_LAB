@@ -29,7 +29,7 @@ int main() {
     };
 
     double areaResult = areaCalculate(points);
-    cout << "Ïëîùàäü ÷åòûðåõóãîëüíèêà ìåòîäîì øíóðêà: " << areaResult << endl;
+    cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ Ñ‡ÐµÑ‚Ñ‹Ñ€ÐµÑ…ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° Ð¼ÐµÑ‚Ð¾Ð´Ð¾Ð¼ ÑˆÐ½ÑƒÑ€ÐºÐ°: " << areaResult << endl;
 
     return 0;
 }
