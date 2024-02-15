@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QTproject1", "QTproject1\QTproject1.vcxproj", "{C04D0A25-626D-42D8-8970-37C33F7B4762}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Debug|x64.ActiveCfg = Debug|x64
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Debug|x64.Build.0 = Debug|x64
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Debug|x86.ActiveCfg = Debug|Win32
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Debug|x86.Build.0 = Debug|Win32
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Release|x64.ActiveCfg = Release|x64
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Release|x64.Build.0 = Release|x64
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Release|x86.ActiveCfg = Release|Win32
+		{C04D0A25-626D-42D8-8970-37C33F7B4762}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A77CE02E-AA3C-4C58-9034-E3482867914E}
+	EndGlobalSection
+EndGlobal

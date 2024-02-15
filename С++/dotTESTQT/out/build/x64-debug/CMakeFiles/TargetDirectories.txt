@@ -1,0 +1,5 @@
+C:/Users/lewac/OneDrive/Рабочий стол/PSTU_LAB/С++/dotTESTQT/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/lewac/OneDrive/Рабочий стол/PSTU_LAB/С++/dotTESTQT/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/lewac/OneDrive/Рабочий стол/PSTU_LAB/С++/dotTESTQT/out/build/x64-debug/dotTESTQT/CMakeFiles/dotTESTQT.dir
+C:/Users/lewac/OneDrive/Рабочий стол/PSTU_LAB/С++/dotTESTQT/out/build/x64-debug/dotTESTQT/CMakeFiles/edit_cache.dir
+C:/Users/lewac/OneDrive/Рабочий стол/PSTU_LAB/С++/dotTESTQT/out/build/x64-debug/dotTESTQT/CMakeFiles/rebuild_cache.dir

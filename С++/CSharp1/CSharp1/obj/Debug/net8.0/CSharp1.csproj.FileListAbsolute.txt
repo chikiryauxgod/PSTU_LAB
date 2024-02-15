@@ -1,0 +1,15 @@
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\bin\Debug\net8.0\CSharp1.exe
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\bin\Debug\net8.0\CSharp1.deps.json
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\bin\Debug\net8.0\CSharp1.runtimeconfig.json
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\bin\Debug\net8.0\CSharp1.dll
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\bin\Debug\net8.0\CSharp1.pdb
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.AssemblyInfoInputs.cache
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.AssemblyInfo.cs
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.csproj.CoreCompileInputs.cache
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.sourcelink.json
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.dll
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\refint\CSharp1.dll
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.pdb
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\CSharp1.genruntimeconfig.cache
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\CSharp1\CSharp1\obj\Debug\net8.0\ref\CSharp1.dll
