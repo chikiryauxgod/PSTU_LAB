@@ -1,0 +1,3 @@
+﻿  grokkingelements.cpp
+grokkingsum.obj : error LNK2005: main уже определен в grokkingelements.obj
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\grokkingsum\x64\Debug\grokkingsum.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
