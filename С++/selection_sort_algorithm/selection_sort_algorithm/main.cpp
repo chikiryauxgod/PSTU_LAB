@@ -40,7 +40,7 @@ vector <T> selection_sort(vector <T> arr) {
 
 int main()
 {
-	std::vector<double> arr = { 1, 1.2, 3, 0, -1.0, 0.5, 100, -99 };
+	vector<double> arr = { 1, 1.2, 3, 0, -1.0, 0.5, 100, -99 };
 	vector<double> sorted = selection_sort(arr);
 
 	cout << "Sorted array: ";
