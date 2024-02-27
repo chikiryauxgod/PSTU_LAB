@@ -1,19 +1,27 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def fourier_series(x, n_terms):
-    result = np.pi - 2 * x
-    for n in range(1, n_terms + 1, 2):
-        result += (4 / (n**3 * np.pi)) * (1 - (-1)**n) * np.sin(n * x)
-    return result
+# Определение функции, возвращающей окружность с центром (x0, y0) и радиусом r
+def circle(x0, y0, r):
+    theta = np.linspace(0, 2*np.pi, 100)
+    x = x0 + r * np.cos(theta)
+    y = y0 + r * np.sin(theta)
+    return x, y
 
-x_values = np.linspace(0, np.pi/2, 1000)
-y_values = fourier_series(x_values, 5)
+# Создание массива значений для комплексной плоскости
+x = np.linspace(-2, 4, 400)
+y = np.linspace(-2, 4, 400)
+X, Y = np.meshgrid(x, y)
 
-plt.plot(x_values, y_values, label='Approximate Sum (5 terms)')
-plt.xlabel('x')
-plt.ylabel('f(x)')
-plt.title('Approximate Fourier Series for $f(x) = \pi - 2x$')
-plt.legend()
+# Вычисление модуля функции |z - 1|
+modulus = np.abs(X + 1j*Y - 1)
+
+# Построение графика
+plt.figure(figsize=(8, 8))
+plt.contour(X, Y, modulus, levels=[0.5], colors='r')  # Окружность |z - 1| = 1/2 красного цвета
+plt.xlabel('Re(z)')
+plt.ylabel('Im(z)')
+plt.title('Contour |z - 1| = 1/2')
 plt.grid(True)
+plt.axis('equal')
 plt.show()
