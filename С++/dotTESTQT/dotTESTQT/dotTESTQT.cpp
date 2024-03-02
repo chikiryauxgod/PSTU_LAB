@@ -104,4 +104,7 @@ private:
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv); // Создаем объект приложения
-    PointWidget w; // Создаем экземпля
+    PointWidget w; // Создаем экземпляр пользовательского виджета
+    w.show(); // Отображаем виджет
+    return a.exec(); // Запускаем основной цикл обработки событий
+}
