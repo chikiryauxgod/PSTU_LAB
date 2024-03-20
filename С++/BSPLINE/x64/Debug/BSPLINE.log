@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\BSPLINE\main.cpp(17,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\BSPLINE\main.cpp(18,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\BSPLINE\main.cpp(19,27): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\BSPLINE\main.cpp(21,47): warning C4305: +=: усечение из "double" в "float"
+  BSPLINE.vcxproj -> C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\BSPLINE\x64\Debug\BSPLINE.exe

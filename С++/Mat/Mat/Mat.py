@@ -1,27 +1,19 @@
-import numpy as np
+п»їimport numpy as np
 import matplotlib.pyplot as plt
 
-# Определение функции, возвращающей окружность с центром (x0, y0) и радиусом r
-def circle(x0, y0, r):
-    theta = np.linspace(0, 2*np.pi, 100)
-    x = x0 + r * np.cos(theta)
-    y = y0 + r * np.sin(theta)
-    return x, y
+# РЎРѕР·РґР°РµРј РґР°РЅРЅС‹Рµ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
+theta = np.linspace(0, 2*np.pi, 100)
+x = 0.5 + 0.5 * np.cos(theta)
+y = np.sqrt(-x**2 + x)  # РњС‹ СЂРµС€Р°РµРј СѓСЂР°РІРЅРµРЅРёРµ y = sqrt(-x^2 + x)
 
-# Создание массива значений для комплексной плоскости
-x = np.linspace(-2, 4, 400)
-y = np.linspace(-2, 4, 400)
-X, Y = np.meshgrid(x, y)
-
-# Вычисление модуля функции |z - 1|
-modulus = np.abs(X + 1j*Y - 1)
-
-# Построение графика
-plt.figure(figsize=(8, 8))
-plt.contour(X, Y, modulus, levels=[0.5], colors='r')  # Окружность |z - 1| = 1/2 красного цвета
-plt.xlabel('Re(z)')
-plt.ylabel('Im(z)')
-plt.title('Contour |z - 1| = 1/2')
+# РР·РѕР±СЂР°Р¶Р°РµРј РѕРєСЂСѓР¶РЅРѕСЃС‚СЊ
+plt.figure(figsize=(6, 6))
+plt.plot(x, y, label=r'$x^2 - x + y^2 = 0$')
+plt.plot(x, -y, linestyle='--')  # РћС‚РѕР±СЂР°Р·РёРј РЅРёР¶РЅСЋСЋ РїРѕР»РѕРІРёРЅСѓ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
+plt.xlabel('Re')
+plt.ylabel('Im')
+plt.title('РћРєСЂСѓР¶РЅРѕСЃС‚СЊ $x^2 - x + y^2 = 0$')
+plt.gca().set_aspect('equal', adjustable='box')  # РЈСЃС‚Р°РЅРѕРІРёРј СЃРѕРѕС‚РЅРѕС€РµРЅРёРµ РјР°СЃС€С‚Р°Р±РѕРІ РѕСЃРµР№
 plt.grid(True)
-plt.axis('equal')
+plt.legend()
 plt.show()
