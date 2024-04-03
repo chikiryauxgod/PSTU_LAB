@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\single-linked-list\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A87CF081-F447-49C1-B34C-45B93CB8C479}|single-linked-list.vcxproj|C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\single-linked-list\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A87CF081-F447-49C1-B34C-45B93CB8C479}|single-linked-list.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\single-linked-list\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\single-linked-list\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAkwFoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-02T17:07:19.801Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
