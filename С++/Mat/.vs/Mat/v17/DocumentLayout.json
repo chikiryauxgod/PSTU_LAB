@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\Mat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{164E5329-D8EB-4C95-A78A-A0DEC02E351E}|Mat\\Mat.pyproj|C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\Mat\\Mat\\Mat.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{164E5329-D8EB-4C95-A78A-A0DEC02E351E}|Mat\\Mat.pyproj|solutionrelative:Mat\\Mat.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mat.py",
+              "DocumentMoniker": "C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\Mat\\Mat\\Mat.py",
+              "RelativeDocumentMoniker": "Mat\\Mat.py",
+              "ToolTip": "C:\\Users\\lewac\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PSTU_LAB\\\u0421\u002B\u002B\\Mat\\Mat\\Mat.py",
+              "RelativeToolTip": "Mat\\Mat.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-03-16T15:13:29.223Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
