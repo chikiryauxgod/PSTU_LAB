@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\capacity_ratio_searching\main.cpp(8,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\capacity_ratio_searching\main.cpp(15,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\capacity_ratio_searching\main.cpp(16,21): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  capacity_ratio_searching.vcxproj -> C:\Users\lewac\OneDrive\Рабочий стол\PSTU_LAB\С++\capacity_ratio_searching\x64\Debug\capacity_ratio_searching.exe

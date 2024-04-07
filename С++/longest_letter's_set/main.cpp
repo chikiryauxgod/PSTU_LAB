@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+
 using namespace std;
 
 int main()
@@ -67,6 +68,8 @@ int main()
         delete[] table[i];
     }
     delete[] table;
+
+    cout << "Git Test" << endl;
 
     return 0;
 }
