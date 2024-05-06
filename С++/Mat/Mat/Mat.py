@@ -1,32 +1,49 @@
 ﻿import numpy as np
+
+class Vertex:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+class Triangle:
+    def __init__(self, v1, v2, v3):
+        self.vertices = [v1, v2, v3]
+
+def render_triangles(triangles, screen_width, screen_height):
+    # Создаем Z-буфер, инициализированный очень большими значениями
+    z_buffer = np.full((screen_height, screen_width), float('inf'))
+
+    # Создаем экран (пиксельный буфер)
+    frame_buffer = np.zeros((screen_height, screen_width, 3), dtype=np.uint8)  # для RGB
+
+    for tri in triangles:
+        # Рисуем каждый треугольник
+        for v in tri.vertices:
+            # Проекция вершины на экран (здесь используется очень простая проекция)
+            x = int((v.x + 1) * screen_width / 2)
+            y = int((v.y + 1) * screen_height / 2)
+            z = v.z
+
+            # Проверка Z-буфера и обновление экрана
+            if 0 <= x < screen_width and 0 <= y < screen_height:
+                if z < z_buffer[y][x]:
+                    z_buffer[y][x] = z
+                    # Устанавливаем цвет пикселя (здесь всегда белый для упрощения)
+                    frame_buffer[y][x] = [255, 255, 255]
+
+    return frame_buffer
+
+# Пример использования
+vertices = [Vertex(-0.5, -0.5, 0.5), Vertex(0.5, -0.5, 0.5), Vertex(0.0, 0.5, 0.5)]
+triangle = Triangle(vertices[0], vertices[1], vertices[2])
+triangles = [triangle]
+
+screen_width = 100
+screen_height = 100
+image = render_triangles(triangles, screen_width, screen_height)
+
+# Отображаем или сохраняем результат
 import matplotlib.pyplot as plt
-
-# Создаем комплексную сетку
-x = np.linspace(-2, 3, 400)
-y = np.linspace(-3, 2, 400)
-X, Y = np.meshgrid(x, y)
-Z = X + 1j*Y
-
-# Определяем условия для областей
-circle = np.abs(Z - (1 - 1j)) <= 1
-below_line = Y <= -1
-left_of_line = X < 1
-
-# Отображаем области
-plt.figure(figsize=(8, 6))
-
-plt.imshow(circle, extent=(-2, 3, -3, 2), origin='lower', cmap='Blues', alpha=0.5)
-plt.imshow(below_line, extent=(-2, 3, -3, 2), origin='lower', cmap='Greens', alpha=0.5)
-plt.imshow(left_of_line, extent=(-2, 3, -3, 2), origin='lower', cmap='Oranges', alpha=0.5)
-
-# Добавляем легенду
-plt.legend(['Circle', 'Below Line', 'Left of Line'], loc='upper left')
-
-# Добавляем заголовок и метки осей
-plt.title('Regions in Complex Plane')
-plt.xlabel('Re(z)')
-plt.ylabel('Im(z)')
-
-# Отображаем график
-plt.grid(True)
+plt.imshow(image)
 plt.show()
