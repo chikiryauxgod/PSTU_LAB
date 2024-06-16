@@ -1,22 +1,20 @@
-﻿import matplotlib.pyplot as plt
+﻿from scipy.integrate import quad
 
-kamaz = {'points': 39, 'production': 53000}
-gaz = {'points': 31, 'production': 53000}
+# Определяем функцию плотности вероятности для нормального распределения
+def normal_pdf(x, mu, sigma):
+    return 1 / (sigma * np.sqrt(2 * np.pi)) * np.exp(-0.5 * ((x - mu) / sigma)**2)
 
-brands = ['КАМАЗ', 'ГАЗ']
-points = [kamaz['points'], gaz['points']]
-production = [kamaz['production'], gaz['production']]
+# Определяем параметры нормального распределения
+mu = 5
+sigma = 1
 
-plt.figure(figsize=(10, 6))
-plt.plot(production, points, marker='o', linestyle='-', color='b')
-plt.title('График зависимости результатов сравнения')
-plt.xlabel('Продукция')
-plt.ylabel('Баллы')
-plt.xticks(rotation=45)
-plt.grid(True)
+# Определяем интервалы для вычисления вероятностей
+interval_1 = (2, 8)
+interval_2 = (mu - 3, mu + 3)
 
-for i in range(len(brands)):
-    plt.text(production[i], points[i], brands[i])
+# Вычисляем вероятности
+probability_1, _ = quad(normal_pdf, *interval_1, args=(mu, sigma))
+probability_2, _ = quad(normal_pdf, *interval_2, args=(mu, sigma))
 
-plt.tight_layout()
-plt.show()
+print("Вероятность, что X примет значение в интервале 2 <= X <= 8:", probability_1)
+print("Вероятность неравенства |X - 5| < 3:", probability_2)
