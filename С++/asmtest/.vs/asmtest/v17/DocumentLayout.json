@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lev\\source\\repos\\asmtest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{491B8AD1-CB2D-4639-95D2-7F0E3F47056B}|asmtest.vcxproj|C:\\Users\\Lev\\source\\repos\\asmtest\\asmtest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{491B8AD1-CB2D-4639-95D2-7F0E3F47056B}|asmtest.vcxproj|solutionrelative:asmtest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491B8AD1-CB2D-4639-95D2-7F0E3F47056B}|asmtest.vcxproj|C:\\Users\\Lev\\source\\repos\\asmtest\\what.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{491B8AD1-CB2D-4639-95D2-7F0E3F47056B}|asmtest.vcxproj|solutionrelative:what.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "what.asm",
+              "DocumentMoniker": "C:\\Users\\Lev\\source\\repos\\asmtest\\what.asm",
+              "RelativeDocumentMoniker": "what.asm",
+              "ToolTip": "C:\\Users\\Lev\\source\\repos\\asmtest\\what.asm",
+              "RelativeToolTip": "what.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-19T14:22:57.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "asmtest.cpp",
+              "DocumentMoniker": "C:\\Users\\Lev\\source\\repos\\asmtest\\asmtest.cpp",
+              "RelativeDocumentMoniker": "asmtest.cpp",
+              "ToolTip": "C:\\Users\\Lev\\source\\repos\\asmtest\\asmtest.cpp",
+              "RelativeToolTip": "asmtest.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-19T14:21:51.567Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

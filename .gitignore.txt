@@ -1,0 +1,13 @@
+# Ignoring Visual Studio related files and directories
+.vs/
+С++/.vs/
+C++/mytgbot/.vs/
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.log
