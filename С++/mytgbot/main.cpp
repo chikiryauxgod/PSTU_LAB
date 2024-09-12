@@ -9,7 +9,7 @@
 
 using namespace std;
 using json = nlohmann::json;
-string apiKey = "26505efaf5a7a3235439c3e6a5f19b4e";
+string apiKey = "ZZZ ВПЕРЕД СЛОНЫ";
 
 vector<string> bot_commands = { "start", "city" };
 
