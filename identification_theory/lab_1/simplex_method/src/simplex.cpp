@@ -111,11 +111,10 @@ bool Simplex::Iterate(const Model & model) {
 
     Vector C = GravityCenter(); 
     int m = C.size();
-
-    // 2) Отражение
-    double alpha = static_cast<double>(config.GetAlpha());
-    double beta  = static_cast<double>(config.GetAlpha());
-    double gamma = static_cast<double>(config.GetGamma());
+    
+    double alpha = config.GetAlpha();
+    double beta  = config.GetAlpha();
+    double gamma = config.GetGamma();
 
     Vector dB_star = (C * (1.0 + alpha)) - (worst.dB * alpha);
     double F_star = model.ComputeF(dB_star);

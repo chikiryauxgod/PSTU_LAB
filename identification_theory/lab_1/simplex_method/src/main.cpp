@@ -13,7 +13,7 @@ int main() {
     Model model(x, y, B);
     Simplex simplex(cfg);
 
-    simplex.InitializeVertices(model, 1.0);
+    simplex.InitializeVertices(model, 2.0);
     simplex.Print();
 
     while (simplex.Iterate(model)) {
