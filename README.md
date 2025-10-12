@@ -1,4 +1,5 @@
 # PSTU_LAB
-PSTU laboratory work on the discipline programming in C/C++/Python language
+### Lev Semenov
+### Department: Information Technology and Automated Systems
 
-started from the bottom now we here
+PSTU laboratory work on the discipline programming in C/C++/Python/PHP/SQL 
