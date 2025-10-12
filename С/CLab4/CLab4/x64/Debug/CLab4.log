@@ -1,3 +1,0 @@
-﻿  main.c
-C:\Users\lewac\OneDrive\Рабочий стол\123\CLab4\CLab4\main.c(120,11): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
-  CLab4.vcxproj -> C:\Users\lewac\OneDrive\Рабочий стол\123\CLab4\x64\Debug\CLab4.exe
