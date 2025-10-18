@@ -44,7 +44,7 @@ for step in range(max_iter):
     db3 = dF_db3(b1, b2, b3)
 
     b1 -= lmbd * db1
-    b2 -= lmbd * db2S
+    b2 -= lmbd * db2
     b3 -= lmbd * db3
 
     if step % 100 == 0:
