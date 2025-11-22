@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 $host = "localhost";
 $user = "boss";
@@ -62,3 +62,4 @@ echo "</table>";
 
 $conn->close();
 ?>
+
