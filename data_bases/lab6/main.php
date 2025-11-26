@@ -2,20 +2,21 @@
 header('Content-Type: text/html; charset=UTF-8');
 
 $config = require __DIR__ . '/config.php';
+$queries = require __DIR__ . '/queries.php';
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 try {
 	$conn = new mysqli(
-			$config['host'],
-			$config['user'],
-			$config['pass'],
-			$config['db']
+		$config['host'],
+		$config['user'],
+		$config['pass'],
+		$config['db']
 	);
 } catch (mysqli_sql_exception $e) {
-	error_log("DB connection error: " . $e->getMessage());
-	http_response_code(500);
-	echo "<p style='color:red'>Database unavailable. Please try again later.</p>";
-	exit;
+		error_log("DB connection error: " . $e->getMessage());
+		http_response_code(500);
+		echo "<p style='color:red'>Database unavailable. Please try again later.</p>";
+		exit;
 }
 
 if (!isset($_GET['action'])) {
@@ -24,53 +25,36 @@ if (!isset($_GET['action'])) {
 }
 
 $action = $_GET['action'];
-$result_message = '';
 $sql = '';
+$result_message = '';
 
 switch ($action) {
 	case 'create':
-			$sql = "CREATE TABLE IF NOT EXISTS test_table (
-									id INT AUTO_INCREMENT PRIMARY KEY,
-									name VARCHAR(50),
-									age INT
-							)";
-			$result_message = "Table 'test_table' created.";
-			break;
-
 	case 'alter':
-			$sql = "ALTER TABLE test_table ADD COLUMN city VARCHAR(50)";
-			$result_message = "Column 'city' added.";
-			break;
-
 	case 'drop':
-			$sql = "DROP TABLE IF EXISTS test_table";
-			$result_message = "Table dropped.";
-			break;
-
 	case 'insert':
-			$sql = "INSERT INTO test_table (name, age, city)
-							VALUES ('Lev', 21, 'Perm')";
-			$result_message = "Record inserted.";
-			break;
-
 	case 'update':
-			$sql = "UPDATE test_table SET age = 30 WHERE name = 'Lev'";
-			$result_message = "Record updated.";
-			break;
-
 	case 'delete':
-			$sql = "DELETE FROM test_table WHERE name = 'Lev'";
-			$result_message = "Record deleted.";
-			break;
-
 	case 'select':
-			$sql = "SELECT * FROM test_table";
-			break;
-
 	case 'trigger':
-		$sql = "SELECT * FROM log ORDER BY action_time DESC";
-		break;
-	
+	case 'trigger_table_create':
+	case 'trigger_update':
+	case 'trigger_delete':
+	case 'trigger_insert':
+	case 'trigger_table_drop'	:
+		$sql = $queries[$action]['sql'];
+		$result_message = $queries[$action]['message'];
+		break;	
+
+	case 'trigger_drop':
+		$conn->query("DROP TRIGGER IF EXISTS test_table_after_insert");
+    $conn->query("DROP TRIGGER IF EXISTS test_table_after_update");
+    $conn->query("DROP TRIGGER IF EXISTS test_table_after_delete");
+		$sql = $queries[$action]['sql'];
+			$result_message = $queries[$action]['message'];
+		break;	
+
+
 	default:
 			echo "<p>Unknown action.</p>";
 			exit;
@@ -93,7 +77,9 @@ try {
 					echo "<p>No data to show.</p>";
 			}
 	} else {
-			$conn->query($sql);
+			if($sql != null) {
+				$conn->query($sql);
+			} 
 			echo "<p>$result_message</p>";
   }
 } catch (mysqli_sql_exception $e) {
