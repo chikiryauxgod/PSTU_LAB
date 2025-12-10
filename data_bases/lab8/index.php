@@ -16,7 +16,6 @@
 <hr>
 
 <h2>Run procedures</h2>
-
 <form action="main.php" method="GET">
     <button type="submit" name="select" value="call_summary_salary">Show total salary</button>
     <button type="submit" name="select" value="call_all_employees">Show all employees</button>

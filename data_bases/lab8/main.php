@@ -25,7 +25,7 @@ $mode = "";
 if (isset($_GET['create'])) {
     $action = $_GET['create'];
     $mode = "create";
-} elseif (isset($_GET['select'])) {
+} else if (isset($_GET['select'])) {
     $action = $_GET['select'];
     $mode = "select";
 } else {
@@ -39,7 +39,13 @@ if (!isset($queries[$action])) {
 }
 
 $sql_template = $queries[$action]['sql'];
-$title = $queries[$action]['message'] ?? $action;
+
+if ($queries[$action]['message'] !== null) {
+    $title = $queries[$action]['message'];
+} else {
+    $title = $action;
+}
+
 
 echo "<h3>$title</h3>";
 
@@ -59,7 +65,6 @@ $sql = $sql_template;
 
 foreach ($_GET as $key => $val) {
     if ($key === 'select') continue;
-
     $sql = str_replace("{" . $key . "}", $val, $sql);
 }
 
